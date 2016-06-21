@@ -4,10 +4,13 @@
 CC=gcc # define the compiler to use
 TARGET=runme # define the name of the executable
 SOURCES=main.c functions.c
-OBJS=$(SOURCES:.c=.o)
 
 ################################################################################
 ### DO NOT EDIT THE FOLLOWING LINES ############################################
+
+# define list of objects
+OBJSC=$(SOURCES:.c=.o)
+OBJS=$(OBJSC:.cpp=.o)
 
 # the target is obtained linking all .o files
 all: $(SOURCES) $(TARGET)

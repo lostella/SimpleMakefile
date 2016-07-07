@@ -18,10 +18,6 @@ all: $(SOURCES) $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(OBJS) -o $(TARGET)
 
-# produce .o from the correspondent source file by calling compiler with -c
-.cpp.o:
-	$(CC) -c $< -o $@
-
 purge: clean
 	rm -f $(TARGET)
 

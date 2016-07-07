@@ -1,6 +1,6 @@
 #include "functions.h"
 
-int main(char ** argv) {
+int main(int argc, char ** argv) {
   call_function();
   return 0;
 }

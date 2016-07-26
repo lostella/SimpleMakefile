@@ -4,6 +4,8 @@
 CC=gcc # define the compiler to use
 TARGET=runme # define the name of the executable
 SOURCES=main.c functions.c
+CFLAGS=-O3
+LFLAGS=-lm
 
 ################################################################################
 ### DO NOT EDIT THE FOLLOWING LINES ############################################
@@ -16,7 +18,7 @@ OBJS=$(OBJSC:.cpp=.o)
 all: $(SOURCES) $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(OBJS) -o $(TARGET)
+	$(CC) $(LFLAGS) $(OBJS) -o $(TARGET)
 
 purge: clean
 	rm -f $(TARGET)
